@@ -97,4 +97,23 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-tveronezi-public</id>
+            <url>https://dl.bintray.com/tveronezi/public/parent/;publish=1</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-tveronezi-public</id>
+            <name>bintray-plugins</name>
+            <url>https://dl.bintray.com/tveronezi/public/parent/;publish=1</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
