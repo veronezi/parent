@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.veronezi</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,6 +16,9 @@
         <arquillian_cube.version>1.15.3</arquillian_cube.version>
         <tomee.version>7.0.4</tomee.version>
         <lombok.version>1.18.0</lombok.version>
+        <log4j.version>1.2.17</log4j.version>
+
+        <docker.plugin.version>0.25.0</docker.plugin.version>
     </properties>
     <distributionManagement>
         <repository>
@@ -98,4 +101,15 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker.plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
